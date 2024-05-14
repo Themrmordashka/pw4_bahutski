@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>By Bahutski</title>
+<link rel="icon" type="image/x-icon" href="https://sb.bsu.by/Data/favicon.ico">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+/* Universal Selector */
+* {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+/* Child and Sibling Selectors */
+header > .roboto-bold,
+footer > .flex-container-footer > div > p {
+  font-weight: bold;
+}
+
+/* Hover Pseudo-class */
+a:hover {
+  background-color: lightblue;
+}
+
+/* Last Child Pseudo-class */
+#text__tables table tr:last-child td {
+  color: blue;
+}
+
+/* Even and Odd Pseudo-classes */
+#text__lists ul li:nth-child(odd),
+#text__tables table tr:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+
+#text__lists ul li:nth-child(even),
+#text__tables table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+/* First-letter Pseudo-element */
+#text__paragraphs p::first-letter {
+  font-size: 150%;
+}
+
+/* Selection Pseudo-element */
+::selection {
+  background-color: yellow;
+}
+
+/* Before Pseudo-element */
+#text__lists ul:before {
+  content: '\2192'; /* Unicode arrow character */
+  margin-right: 5px;
+}
+</style>
+
+</head>
+
+<header>
+<h1 class="roboto-bold">Web-design PW4 - Report</h1>
+</header>
+
+<body id="top">
+
+<main>
+
+    <article id="text__paragraphs">
+        <h2 class="roboto-bold">Selector Specificity:</h2>
+        <p>Selector specificity refers to the weight or importance assigned to a CSS selector in determining which styles should be applied to an element. It determines which style rules take precedence when multiple rules apply to the same element. Specificity is calculated based on the components of a selector.</p>
+        <h3 class="roboto-bold"><strong>How it's Calculated:</strong></h3>
+        <ul>
+            <li>Specificity is calculated using four components:</li>
+            <ul>
+                <li>ID selectors: Count the number of ID selectors in the selector.</li>
+                <li>Class selectors, attribute selectors, and pseudo-classes: Count the number of class selectors, attribute selectors, and pseudo-classes in the selector.</li>
+                <li>Type selectors and pseudo-elements: Count the number of type selectors and pseudo-elements in the selector.</li>
+                <li>Inline styles: These have the highest specificity.</li>
+              </ul>
+            <li>Each component is assigned a numerical value.</li>
+            <li>Specificity is represented as a four-part value, with each part separated by commas.</li>
+            <li>The higher the specificity value, the more weight the selector carries.</li>
+          </ul>
+        <h2 class="roboto-bold">Complex Selectors:</h2>
+        <p>Complex selectors are CSS selectors that target elements based on a combination of multiple criteria. They allow for more precise targeting of elements by combining different types of selectors. Examples of complex selectors include descendant selectors, child selectors, adjacent sibling selectors, and general sibling selectors.</p>
+        <h2 class="roboto-bold">Difference between Pseudo-classes and Pseudo-elements:</h2>
+        <ul>
+            <li>Pseudo-classes: Pseudo-classes are used to define a special state or condition of an element. They are preceded by a colon (:) and are used to style elements based on user interaction or structural information. Examples include :hover, :active, :focus, :first-child, and :nth-child. </li>
+            <li>Pseudo-elements: Pseudo-elements, on the other hand, are used to style specific parts of an element. They are preceded by a double colon (::) and allow you to create virtual elements that are not part of the document structure. Examples include ::before, ::after, ::first-line, and ::first-letter. </li>
+        </ul>
+
+    </article>
+
+    <section id="text">
+        <header>
+          <h1>Text</h1>
+        </header>
+        <article id="text__headings">
+          <header>
+            <h1>Headings</h1>
+          </header>
+          <div>
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+          </div>
+          <footer>
+            <p><a href="#top">[Top]</a></p>
+          </footer>
+        </article>
+        <!-- Remaining articles omitted for brevity -->
+      </section>
+</main>
+
+</body>
+
+<footer>
+
+    <div class="flex-container-footer">
+
+    <div style="flex-wrap: wrap; padding: 10px;">
+        <p>Author: Bahutski Stanislau<br>
+        <a href="mailto:hege@example.com"> </a>
+        </div>
+        </div>
+<footer>
